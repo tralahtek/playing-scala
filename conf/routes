@@ -8,3 +8,30 @@ GET     /                           controllers.HomeController.index
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+#
+# Complete CRUD for Product
+#
+GET /product controllers.ProductController.index
+GET /product/add controllers.ProductController.blank
+POST /product/ controllers.ProductController.insert
+POST /product/:id controllers.ProductController.update(id:Long)
+POST /product:id/remove controllers.ProductController.remove(id:Long)
+GET /product/details/:id controllers.ProductController.details(id:Long)
+#
+# Complete GRUD for Review
+#
+GET /review controllers.ReviewController.index
+GET /review/add controllers.ReviewController.blank
+POST /review/ controllers.ReviewController.insert
+POST /review/:id controllers.ReviewController.update(id:Long)
+POST /review:id/remove controllers.ReviewController.remove(id:Long)
+GET /review/details/:id controllers.ReviewController.details(id:Long)
+#
+# Complete CRUD for Image
+#
+GET /image controllers.ImageController.index
+GET /image/add controllers.ImageController.blank
+POST /image/ controllers.ImageController.insert
+POST /image/:id controllers.ImageController.update(id:Long)
+POST /image:id/remove controllers.ImageController.remove(id:Long)
+GET /image/details/:id controllers.ImageController.details(id:Long)

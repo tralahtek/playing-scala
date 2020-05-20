@@ -1,1 +1,7 @@
 # https://www.playframework.com/documentation/latest/ScalaI18N
+success.delete = OK '{0}' deleted!
+success.insert = OK '{0}' created!
+success.update = OK '{0}' updated!
+error.notFound = Nothing Found with ID {0,number,0}
+error.number = Not a valid number
+error.required = Missing value here
